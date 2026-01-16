@@ -3,178 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Grúas TransRent | Arrastre para camión</title>
 
 <style>
 :root{
-    --negro: #000000;
-    --gris-oscuro: #111111;
-    --amarillo: #f5b400;
-    --blanco: #ffffff;
-    --verde: #25D366;
+    --negro:#000;
+    --gris:#111;
+    --amarillo:#f5b400;
+    --blanco:#fff;
+    --verde:#25D366;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    background: #fff;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
 }
 
-/* MENU */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--negro);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 40px;
-    z-index: 1000;
-    border-bottom: 3px solid var(--amarillo);
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:var(--negro);
+    padding:12px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid var(--amarillo);
+    z-index:1000;
 }
 
-nav img {
-    height: 48px;
+nav img{ height:48px; }
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+    margin:0;
+    padding:0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+nav ul li a{
+    color:var(--blanco);
+    text-decoration:none;
+    font-weight:bold;
 }
 
-nav ul li a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+nav ul li a:hover{ color:var(--amarillo); }
+
+header{
+    background:var(--gris);
+    color:var(--blanco);
+    text-align:center;
+    padding:160px 20px 100px;
 }
 
-nav ul li a:hover {
-    color: var(--amarillo);
+header h1{
+    color:var(--amarillo);
+    font-size:40px;
 }
 
-/* HERO */
-header {
-    background: linear-gradient(
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.85)
-    ), var(--gris-oscuro);
-    color: var(--blanco);
-    padding: 160px 20px 100px;
-    text-align: center;
+header p{ color:#ddd; font-size:18px; }
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:16px 34px;
+    background:var(--verde);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
 }
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: var(--amarillo);
-    letter-spacing: 1px;
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 20px;
 }
 
-header p {
-    font-size: 18px;
-    color: #ddd;
-}
-
-/* BOTONES */
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 16px 34px;
-    background: var(--verde);
-    color: var(--blanco);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-/* SECCIONES */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 30px;
-    color: var(--negro);
-    position: relative;
+h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:40px;
 }
 
 h2::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--amarillo);
-    margin: 15px auto 0;
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:var(--amarillo);
+    margin:15px auto 0;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
-.card {
-    background: #f4f4f4;
-    padding: 30px;
-    border-left: 6px solid var(--amarillo);
-    border-radius: 6px;
+.card{
+    background:#f4f4f4;
+    padding:30px;
+    border-left:6px solid var(--amarillo);
 }
 
-/* CONTACTO */
-#contacto {
-    background: var(--gris-oscuro);
-    color: var(--blanco);
+.dark{
+    background:var(--gris);
+    color:var(--blanco);
 }
 
-#contacto h2 {
-    color: var(--amarillo);
+footer{
+    background:var(--negro);
+    color:var(--blanco);
+    text-align:center;
+    padding:30px 20px;
+    border-top:3px solid var(--amarillo);
 }
 
-#contacto h2::after{
-    background: var(--amarillo);
-}
+footer a{ color:var(--amarillo); text-decoration:none; }
 
-/* FOOTER */
-footer {
-    background: var(--negro);
-    color: var(--blanco);
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 3px solid var(--amarillo);
-}
-
-footer a {
-    color: var(--amarillo);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    header h1 {
-        font-size: 32px;
-    }
+@media(max-width:768px){
+    nav ul{ display:none; }
 }
 </style>
 </head>
@@ -193,44 +144,63 @@ footer a {
 
 <header id="inicio">
     <h1>GRÚAS TRANSRENT</h1>
-    <p>
-        Arrastre para camiones y unidades pesadas<br>
-        Valle de Toluca y viajes foráneos a toda la República
-    </p>
-
-    <a class="btn" href="https://wa.me/527229045851" target="_blank">
-        Solicitar servicio por WhatsApp
-    </a>
+    <p>Arrastre para camiones y unidades pesadas<br>
+    Valle de Toluca y viajes foráneos a toda la República</p>
+    <a class="btn" href="https://wa.me/527229045851" target="_blank">Solicitar servicio</a>
 </header>
 
 <section id="nosotros">
     <h2>Nosotros</h2>
     <p>
         En <strong>Grúas TransRent</strong> brindamos servicios profesionales de grúa y arrastre
-        para el público en general y empresas, enfocados en el traslado seguro y eficiente
-        de camiones y unidades pesadas.
+        para el público en general y empresas con flotillas, enfocados en el traslado seguro
+        y eficiente de unidades, reduciendo tiempos muertos y ofreciendo soluciones confiables.
     </p>
+</section>
+
+<section>
+    <h2>Misión, Visión y Valores</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Misión</h3>
+            <p>Brindar servicios de grúa y arrastre con atención oportuna, manejo responsable
+            y soluciones eficientes.</p>
+        </div>
+        <div class="card">
+            <h3>Visión</h3>
+            <p>Ser una empresa líder en servicios de grúa y arrastre, reconocida por su
+            confiabilidad y profesionalismo.</p>
+        </div>
+        <div class="card">
+            <h3>Valores</h3>
+            <ul>
+                <li>Compromiso</li>
+                <li>Profesionalismo</li>
+                <li>Responsabilidad</li>
+                <li>Confiabilidad</li>
+                <li>Eficiencia</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="grid">
-        <div class="card">
-            <h3>Arrastre de camiones</h3>
-            <p>Traslado seguro desde el punto de avería o accidente.</p>
-        </div>
-        <div class="card">
-            <h3>Servicio 24/7</h3>
-            <p>Atención inmediata cualquier día y a cualquier hora.</p>
-        </div>
-        <div class="card">
-            <h3>Viajes foráneos</h3>
-            <p>Cobertura en toda la República Mexicana.</p>
-        </div>
-        <div class="card">
-            <h3>Soluciones personalizadas</h3>
-            <p>Servicios adaptados a cada necesidad.</p>
-        </div>
+        <div class="card">Arrastre de camiones y unidades pesadas</div>
+        <div class="card">Servicio en carretera 24/7</div>
+        <div class="card">Viajes foráneos a toda la República</div>
+        <div class="card">Soluciones personalizadas</div>
+    </div>
+</section>
+
+<section class="dark">
+    <h2>Beneficios de Elegir TransRent</h2>
+    <div class="grid">
+        <div class="card">Rapidez y disponibilidad inmediata</div>
+        <div class="card">Profesionalismo y experiencia</div>
+        <div class="card">Costos competitivos</div>
+        <div class="card">Comunicación clara y constante</div>
     </div>
 </section>
 
@@ -238,18 +208,16 @@ footer a {
     <h2>Contacto</h2>
     <p style="text-align:center;">
         Atención 24/7 vía WhatsApp<br><br>
-        <a class="btn" href="https://wa.me/527229045851" target="_blank">
-            Contactar ahora
-        </a>
+        <a class="btn" href="https://wa.me/527229045851" target="_blank">Contactar ahora</a>
     </p>
 </section>
 
 <footer>
     <p>© Grúas TransRent</p>
     <p>
-        <a href="https://www.facebook.com/gruastransrentmex" target="_blank">Facebook</a> |
-        <a href="https://www.instagram.com/gruas.trans.rent/" target="_blank">Instagram</a> |
-        <a href="https://www.tiktok.com/@gruas.transrent1" target="_blank">TikTok</a>
+        <a href="https://www.facebook.com/gruastransrentmex">Facebook</a> |
+        <a href="https://www.instagram.com/gruas.trans.rent/">Instagram</a> |
+        <a href="https://www.tiktok.com/@gruas.transrent1">TikTok</a>
     </p>
 </footer>
 

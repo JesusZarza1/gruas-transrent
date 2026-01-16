@@ -1,194 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grúas TransRent | Arrastre para camión y plataforma</title>
-    <meta name="description" content="Servicios profesionales de grúa y arrastre para camiones y unidades pesadas. Atención 24/7 en el Valle de Toluca y toda la República.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-        }
+<title>Grúas TransRent | Arrastre para camión</title>
 
-        header {
-            background: #000;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
+<style>
+:root{
+    --negro: #000000;
+    --gris-oscuro: #111111;
+    --amarillo: #f5b400;
+    --blanco: #ffffff;
+    --verde: #25D366;
+}
 
-        header img {
-            max-width: 260px;
-            margin-bottom: 20px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+}
 
-        header h1 {
-            margin: 10px 0;
-            font-size: 32px;
-        }
+/* MENU */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--negro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    z-index: 1000;
+    border-bottom: 3px solid var(--amarillo);
+}
 
-        header p {
-            font-size: 18px;
-            color: #ccc;
-        }
+nav img {
+    height: 48px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #25D366;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
+nav ul li a:hover {
+    color: var(--amarillo);
+}
 
-        .columns {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+/* HERO */
+header {
+    background: linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.85)
+    ), var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 160px 20px 100px;
+    text-align: center;
+}
 
-        .box {
-            background: #f4f4f4;
-            padding: 25px;
-            border-radius: 8px;
-        }
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--amarillo);
+    letter-spacing: 1px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+header p {
+    font-size: 18px;
+    color: #ddd;
+}
 
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 8px;
-        }
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 34px;
+    background: var(--verde);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 30px 20px;
-        }
+.btn:hover {
+    opacity: 0.9;
+}
 
-        footer a {
-            color: #25D366;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+/* SECCIONES */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 20px;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-        }
-    </style>
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: var(--negro);
+    position: relative;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--amarillo);
+    margin: 15px auto 0;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 30px;
+    border-left: 6px solid var(--amarillo);
+    border-radius: 6px;
+}
+
+/* CONTACTO */
+#contacto {
+    background: var(--gris-oscuro);
+    color: var(--blanco);
+}
+
+#contacto h2 {
+    color: var(--amarillo);
+}
+
+#contacto h2::after{
+    background: var(--amarillo);
+}
+
+/* FOOTER */
+footer {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 3px solid var(--amarillo);
+}
+
+footer a {
+    color: var(--amarillo);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<nav>
     <img src="img/logo.png" alt="Grúas TransRent">
-    <h1>Grúas TransRent</h1>
-    <p>Arrastre para camiones y unidades pesadas<br>Traslados seguros, resultados confiables</p>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<header id="inicio">
+    <h1>GRÚAS TRANSRENT</h1>
+    <p>
+        Arrastre para camiones y unidades pesadas<br>
+        Valle de Toluca y viajes foráneos a toda la República
+    </p>
 
     <a class="btn" href="https://wa.me/527229045851" target="_blank">
         Solicitar servicio por WhatsApp
     </a>
 </header>
 
-<section>
+<section id="nosotros">
     <h2>Nosotros</h2>
     <p>
-        En <strong>Grúas TransRent</strong> brindamos servicios profesionales de grúa y arrastre para el público en general
-        y empresas con flotillas, enfocados en el traslado seguro y eficiente de unidades.
-    </p>
-    <p>
-        Somos especialistas en el arrastre de camiones de gran tonelaje y unidades pesadas, respaldados por experiencia,
-        equipo adecuado y personal capacitado, asegurando altos estándares de cuidado y responsabilidad.
+        En <strong>Grúas TransRent</strong> brindamos servicios profesionales de grúa y arrastre
+        para el público en general y empresas, enfocados en el traslado seguro y eficiente
+        de camiones y unidades pesadas.
     </p>
 </section>
 
-<section>
-    <h2>Misión · Visión · Valores</h2>
-    <div class="columns">
-        <div class="box">
-            <h3>Misión</h3>
-            <p>
-                Brindar servicios de grúa y arrastre con atención oportuna, manejo responsable y soluciones eficientes
-                que permitan a nuestros clientes mantener la continuidad de su operación.
-            </p>
-        </div>
-
-        <div class="box">
-            <h3>Visión</h3>
-            <p>
-                Ser una empresa líder en servicios de grúa y arrastre de unidades pesadas, reconocida por su confiabilidad,
-                eficiencia y profesionalismo.
-            </p>
-        </div>
-
-        <div class="box">
-            <h3>Valores</h3>
-            <ul>
-                <li>Compromiso</li>
-                <li>Profesionalismo</li>
-                <li>Responsabilidad</li>
-                <li>Confiabilidad</li>
-                <li>Eficiencia</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section>
+<section id="servicios">
     <h2>Nuestros Servicios</h2>
-    <div class="columns">
-        <div class="box">
+    <div class="grid">
+        <div class="card">
             <h3>Arrastre de camiones</h3>
-            <p>Traslado seguro desde el punto de avería o accidente hasta el destino indicado.</p>
+            <p>Traslado seguro desde el punto de avería o accidente.</p>
         </div>
-
-        <div class="box">
+        <div class="card">
             <h3>Servicio 24/7</h3>
             <p>Atención inmediata cualquier día y a cualquier hora.</p>
         </div>
-
-        <div class="box">
+        <div class="card">
             <h3>Viajes foráneos</h3>
-            <p>Cobertura en todo el Valle de Toluca y a todos los estados de la República.</p>
+            <p>Cobertura en toda la República Mexicana.</p>
         </div>
-
-        <div class="box">
+        <div class="card">
             <h3>Soluciones personalizadas</h3>
-            <p>Servicios adaptados a las necesidades de cada cliente.</p>
+            <p>Servicios adaptados a cada necesidad.</p>
         </div>
     </div>
 </section>
 
-<section>
-    <h2>Ubicación</h2>
-    <iframe 
-        src="https://www.google.com/maps?q=GRUAS+TRANSRENT&output=embed">
-    </iframe>
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">
+        Atención 24/7 vía WhatsApp<br><br>
+        <a class="btn" href="https://wa.me/527229045851" target="_blank">
+            Contactar ahora
+        </a>
+    </p>
 </section>
 
 <footer>
